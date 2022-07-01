@@ -132,7 +132,7 @@ The CITY table is described as follows:
 SELECT NAME FROM CITY WHERE COUNTRYCODE = 'JPN';        
 ```
 
-###**[Weather Observation Station 1](https://www.hackerrank.com/challenges/weather-observation-station-1)**
+###**[Station 1](https://www.hackerrank.com/challenges/weather-observation-station-1)**
 
 Query a list of CITY and STATE from STATION.
 
@@ -154,7 +154,7 @@ The STATION table is described as follows:
 SELECT CITY,STATE FROM STATION;       
 ```
 
-###**[Weather Observation Station 3](https://www.hackerrank.com/challenges/weather-observation-station-3)**
+###**[Station 3](https://www.hackerrank.com/challenges/weather-observation-station-3)**
 
 Query a list of CITY names from STATION with even ID numbers only. You may print the results in any order, but must exclude duplicates from your answer.
 
@@ -177,7 +177,7 @@ where LAT_N is the northern latitude and LONG_W is the western longitude.
 SELECT DISTINCT CITY FROM STATION WHERE MOD(ID,2)=0 ORDER BY CITY ASC;       
 ```
 
-###**[Weather Observation Station 4](https://www.hackerrank.com/challenges/weather-observation-station-4)**
+###**[Station 4](https://www.hackerrank.com/challenges/weather-observation-station-4)**
 
 Let NUM be the number of CITY entries in STATION, and NUMunique be the number of unique cities. Query the value of NUM−NUMunique from STATION.
 
@@ -202,7 +202,7 @@ where LAT_N is the northern latitude and LONG_W is the western longitude.
 SELECT COUNT(CITY) - COUNT(DISTINCT CITY) FROM STATION;       
 ```
 
-###**[Weather Observation Station 5](https://www.hackerrank.com/challenges/weather-observation-station-5)**
+###**[Station 5](https://www.hackerrank.com/challenges/weather-observation-station-5)**
 
 Query the two cities in STATION with the shortest and longest CITY names, as well as their respective lengths (i.e.: number of characters in the name). If there is more than one smallest or largest city, choose the one that comes first when ordered alphabetically.
 
@@ -240,7 +240,7 @@ select city, length(city) from station order by length(city) DESC,city ASC fetch
 select city, length(city) from station order by length(city) asc ,city asc fetch first row only;      
 ```
 
-###**[Weather Observation Station 6](https://www.hackerrank.com/challenges/weather-observation-station-6)**
+###**[Station 6](https://www.hackerrank.com/challenges/weather-observation-station-6)**
 
 Query the list of CITY names starting with vowels (a, e, i, o, u) from STATION. Your result cannot contain duplicates.
 
@@ -264,7 +264,7 @@ SELECT DISTINCT(CITY) FROM STATION WHERE CITY LIKE 'A%' OR CITY LIKE 'E%' OR CIT
 OR CITY LIKE 'U%' ORDER BY CITY ASC;       
 ```
 
-###**[Weather Observation Station 7](https://www.hackerrank.com/challenges/weather-observation-station-7)**
+###**[Station 7](https://www.hackerrank.com/challenges/weather-observation-station-7)**
 
 Query the list of CITY names ending with vowels (a, e, i, o, u) from STATION. Your result cannot contain duplicates.
 
@@ -288,7 +288,7 @@ SELECT DISTINCT(CITY) FROM STATION WHERE CITY LIKE '%a' OR CITY LIKE '%e' OR CIT
 OR CITY LIKE '%u';       
 ```
 
-###**[Weather Observation Station 8](https://www.hackerrank.com/challenges/weather-observation-station-8/problem)**
+###**[Station 8](https://www.hackerrank.com/challenges/weather-observation-station-8/problem)**
 
 Query the list of CITY names from STATION which have vowels (i.e., a, e, i, o, and u) as both their first and last characters. Your result cannot contain duplicates.
 
@@ -311,7 +311,7 @@ where LAT_N is the northern latitude and LONG_W is the western longitude.
 SELECT DISTINCT CITY FROM STATION WHERE (CITY LIKE 'A%' OR CITY LIKE 'E%' OR CITY LIKE 'I%' OR CITY LIKE 'O%' OR CITY LIKE 'U%') AND (CITY LIKE '%a' OR CITY LIKE '%e' OR CITY LIKE '%i' OR CITY LIKE '%o' OR CITY LIKE '%u') order by city;      
 ```
 
-###**[Weather Observation Station 9](https://www.hackerrank.com/challenges/weather-observation-station-9/problem)**
+###**[Station 9](https://www.hackerrank.com/challenges/weather-observation-station-9/problem)**
 
 Query the list of CITY names from STATION that do not start with vowels. Your result cannot contain duplicates.
 
@@ -335,7 +335,7 @@ SELECT DISTINCT CITY FROM STATION WHERE upper(SUBSTR(CITY,1,1)) NOT IN ('A','E',
 ('a','e','i','o','u');     
 ```
 
-###**[Weather Observation Station 10](https://www.hackerrank.com/challenges/weather-observation-station-10/problem)**
+###**[Station 10](https://www.hackerrank.com/challenges/weather-observation-station-10/problem)**
 
 Query the list of CITY names from STATION that do not end with vowels. Your result cannot contain duplicates.
 
@@ -358,7 +358,7 @@ where LAT_N is the northern latitude and LONG_W is the western longitude.
 SELECT DISTINCT CITY FROM STATION WHERE UPPER(SUBSTR(CITY, LENGTH(CITY), 1)) NOT IN ('A','E','I','O','U') AND LOWER(SUBSTR(CITY, LENGTH(CITY),1)) NOT IN ('a','e','i','o','u');    
 ```
 
-###**[Weather Observation Station 11](https://www.hackerrank.com/challenges/weather-observation-station-11/problem)**
+###**[Station 11](https://www.hackerrank.com/challenges/weather-observation-station-11/problem)**
 
 Query the list of CITY names from STATION that either do not start with vowels or do not end with vowels. Your result cannot contain duplicates.
 
@@ -381,7 +381,7 @@ where LAT_N is the northern latitude and LONG_W is the western longitude.
 SELECT DISTINCT CITY FROM STATION WHERE LOWER(SUBSTR(CITY,1,1)) NOT IN ('a','e','i','o','u') OR LOWER(SUBSTR(CITY, LENGTH(CITY),1)) NOT IN ('a','e','i','o','u');   
 ```
 
-###**[Weather Observation Station 12](https://www.hackerrank.com/challenges/weather-observation-station-12/problem)**
+###**[Station 12](https://www.hackerrank.com/challenges/weather-observation-station-12/problem)**
 
 Query the list of CITY names from STATION that do not start with vowels and do not end with vowels. Your result cannot contain duplicates.
 
